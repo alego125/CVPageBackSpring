@@ -17,7 +17,7 @@ public class EducacionController {
     @Autowired
     private IEducacionService serviceEducation;
     
-    @GetMapping(value = "getall", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "get", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Educacion> listarEducacion(){
         return this.serviceEducation.listarEduacion();
     }

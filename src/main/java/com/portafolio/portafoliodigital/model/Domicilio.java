@@ -8,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,10 +32,6 @@ public class Domicilio {
     @Column(length = 45, nullable = true)
     private String departamento;
     
-    @OneToOne
-    @JoinColumn(name = "id_domicilio")
-    private Usuario usuario;
-    
     @ManyToOne
     @JoinColumn(name = "id_ciudad")
     private Ciudad ciudad;
@@ -50,7 +45,6 @@ public class Domicilio {
         this.numero = numero;
         this.piso = piso;
         this.departamento = departamento;
-        this.usuario = usuario;
         this.ciudad = ciudad;
     }      
     

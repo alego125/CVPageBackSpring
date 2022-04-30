@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -50,8 +52,12 @@ public class Usuario {
      @Column(length = 450, nullable = true)
     private String urlPortada;
      
-      @Column(length = 450, nullable = true)
+    @Column(length = 450, nullable = true)
     private String urlPerfil;
+      
+    @OneToOne
+    @JoinColumn(name = "id_domicilio")
+    private Domicilio domicilio;
 
     public Usuario() {
     }

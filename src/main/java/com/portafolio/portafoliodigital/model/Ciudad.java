@@ -23,9 +23,6 @@ public class Ciudad {
     @Column(name = "ciudad_nombre", length = 45, nullable = false)
    private String nombreCiudad;
     
-    @Column(name = "codigo_postal", length = 45, nullable = false)
-    private String  codigoPostal;
-    
     @ManyToOne
     @JoinColumn(name = "id_provincia")
     private Provincia provincia;
@@ -36,7 +33,6 @@ public class Ciudad {
     public Ciudad(Long idCiudad, String nombreCiudad, String codigoPostal, Provincia provincia) {
         this.idCiudad = idCiudad;
         this.nombreCiudad = nombreCiudad;
-        this.codigoPostal = codigoPostal;
         this.provincia = provincia;
     }        
     

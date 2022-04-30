@@ -17,7 +17,7 @@ public class DomicilioController {
     @Autowired
     private IDomicilioService serviceDomicilio;
     
-    @GetMapping(value = "getall", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "get", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Domicilio> listarDomicilio(){
         return this.serviceDomicilio.listarDomicilio();
     }

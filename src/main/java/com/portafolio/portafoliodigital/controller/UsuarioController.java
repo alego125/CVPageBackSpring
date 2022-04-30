@@ -19,13 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping(value = "user")
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class UsuarioController {
     
     @Autowired
     private IUsuarioService serviceUser;
     
-    @CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
-    @GetMapping(value = "getall", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "get", produces = MediaType.APPLICATION_JSON_VALUE)
         public List<UsuarioDTO> listarSkill(){
         return serviceUser.listarUsuarios();
     }

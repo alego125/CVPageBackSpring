@@ -17,7 +17,7 @@ public class SkillController {
     @Autowired
     private ISkillService serviceSkill;
     
-    @GetMapping(value = "getall", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "get", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Skill> listarSkill(){
         return serviceSkill.listarSkills();
     }

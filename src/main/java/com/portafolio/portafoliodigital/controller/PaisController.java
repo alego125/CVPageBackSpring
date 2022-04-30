@@ -1,27 +1,29 @@
 
 package com.portafolio.portafoliodigital.controller;
 
-import com.portafolio.portafoliodigital.model.Proyecto;
-import com.portafolio.portafoliodigital.service.IProyectoService;
+import com.portafolio.portafoliodigital.model.Pais;
+import com.portafolio.portafoliodigital.service.IPaisService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping(value = "proyecto")
 @RestController
+@RequestMapping(value = "pais")
 @CrossOrigin(origins = "http://localhost:4200")
-public class ProyectoController {
+public class PaisController {
     
     @Autowired
-    private IProyectoService serviceProyect;
+    private IPaisService servicioPais;
     
     @GetMapping(value = "get", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Proyecto> listarProyectos(){
-        return this.serviceProyect.listarProyectos();
+    @Transactional(readOnly = true)
+    public List<Pais> obtenerPaises(){
+        return this.servicioPais.listarPais();
     }
     
 }

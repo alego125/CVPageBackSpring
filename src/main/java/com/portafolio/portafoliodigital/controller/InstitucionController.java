@@ -18,7 +18,7 @@ public class InstitucionController {
     @Autowired
     private IInstitucionService serviceInstitution;
     
-    @GetMapping(value = "getall", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "get", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Institucion> listarInstitucion(){
         return this.serviceInstitution.listarInstitucion();
     }

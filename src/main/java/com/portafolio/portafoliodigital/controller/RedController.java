@@ -17,7 +17,7 @@ public class RedController {
     @Autowired
     private IRedService serviceRed;
     
-    @GetMapping(value = "getall", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "get", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Red> listarRedes(){
         return this.serviceRed.listarRedes();
     }
