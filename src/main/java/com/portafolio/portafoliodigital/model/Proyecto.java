@@ -1,4 +1,4 @@
-
+ 
 package com.portafolio.portafoliodigital.model;
 
 import java.sql.Date;
@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,6 +32,10 @@ public class Proyecto {
     
     @Column(name = "fecha_fin", nullable = true)
    private Date fechaFin;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_user")
+    private Usuario usuario;
 
     public Proyecto() {
     }

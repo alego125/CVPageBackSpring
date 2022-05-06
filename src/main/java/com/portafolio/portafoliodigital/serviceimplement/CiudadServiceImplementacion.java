@@ -5,6 +5,7 @@ import com.portafolio.portafoliodigital.model.Ciudad;
 import com.portafolio.portafoliodigital.repository.CiudadRepository;
 import com.portafolio.portafoliodigital.service.ICiudadService;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -39,6 +40,11 @@ public class CiudadServiceImplementacion implements ICiudadService{
     @Override
     public List<Ciudad> buscarPorProvincia(Long id) {
         return this.ciudadRepo.obtenerCiudadPorProvincia(id);
+    }
+
+    @Override
+    public Optional<Ciudad> listarCiudadPorId(Long id) {
+        return this.ciudadRepo.findById(id);
     }
     
 }

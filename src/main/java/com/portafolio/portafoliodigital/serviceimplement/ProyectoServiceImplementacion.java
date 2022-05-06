@@ -23,8 +23,8 @@ public class ProyectoServiceImplementacion implements IProyectoService{
 
     @Override
     @Transactional
-    public void crearProyecto(Proyecto proyecto) {
-        this.proyectoRepo.save(proyecto);
+    public Proyecto crearProyecto(Proyecto proyecto) {
+        return this.proyectoRepo.save(proyecto);
     }
 
     @Override
