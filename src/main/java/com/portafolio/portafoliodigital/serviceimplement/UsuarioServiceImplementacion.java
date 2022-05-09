@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class UsuarioServiceImplementacion implements IUsuarioService {
 
     @Autowired
@@ -20,7 +21,6 @@ public class UsuarioServiceImplementacion implements IUsuarioService {
     private Helpers help;
 
     @Override
-    @Transactional(readOnly = true)
     public List<UsuarioDTO> listarUsuarios() {
 
         /*
@@ -40,19 +40,16 @@ public class UsuarioServiceImplementacion implements IUsuarioService {
     }
 
     @Override
-    @Transactional
     public void crearUsuario(Usuario usuario) {
         this.usuarioRepo.save(usuario);
     }
 
     @Override
-    @Transactional
     public void eliminarUsuario(Long id) {
         this.usuarioRepo.deleteById(id);
     }    
 
     @Override
-    @Transactional
     public Usuario actualizarUsuario(Usuario usuario) {                                                
         return this.usuarioRepo.save(usuario);
     }

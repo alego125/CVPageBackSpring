@@ -23,9 +23,9 @@ public class Institucion {
     @Column(name = "nombre_institucion",length = 45, nullable = false)
     private String nombreInstitucion;
     
-    @ManyToOne
-    @JoinColumn(name = "id_ciudad")
-    private Ciudad ciudad;
+//    @ManyToOne
+//    @JoinColumn(name = "id_ciudad")
+//    private Ciudad ciudad;
 
     public Institucion() {
     }
@@ -33,7 +33,6 @@ public class Institucion {
     public Institucion(Long idInstitucion, String nombreInstitucion, Ciudad ciudad) {
         this.idInstitucion = idInstitucion;
         this.nombreInstitucion = nombreInstitucion;
-        this.ciudad = ciudad;
     }
     
     

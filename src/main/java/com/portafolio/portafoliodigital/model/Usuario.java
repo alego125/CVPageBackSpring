@@ -11,10 +11,12 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "user")
 @Getter @Setter
+@ToString
 public class Usuario {
     
     @Id
@@ -25,8 +27,8 @@ public class Usuario {
     @Column(name = "user_name", length = 45, nullable = false)
     private String name;
     
-    @Column(length = 180, nullable = false)
-    private String password;    
+//    @Column(length = 180, nullable = false)
+//    private String password;    
     
     @Column(length = 45, nullable = false)
     private String nombre;
@@ -62,10 +64,10 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(Long idUser, String name, String password, String nombre, String apellido, Date fechaNacimiento, String web, String telefono, String email, String presentacion, String urlPortada, String urlPerfil) {
+    public Usuario(Long idUser, String name,  String nombre, String apellido, Date fechaNacimiento, String web, String telefono, String email, String presentacion, String urlPortada, String urlPerfil) {
         this.idUser = idUser;
         this.name = name;
-        this.password = password;
+//        this.password = password;
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNacimiento = fechaNacimiento;

@@ -2,6 +2,7 @@
 package com.portafolio.portafoliodigital.model;
 
 import java.sql.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,9 +12,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
-@Getter @Setter
+@Getter @Setter 
+@ToString
 public class Proyecto {
     
     @Id
@@ -33,20 +36,23 @@ public class Proyecto {
     @Column(name = "fecha_fin", nullable = true)
    private Date fechaFin;
     
-    @ManyToOne
+//    @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "id_user")
-    private Usuario usuario;
+    private Long idUser;
 
     public Proyecto() {
     }
 
-    public Proyecto(Long idProyecto, String tituloProyecto, String descripcion, Date fechaInicio, Date fechaFin) {
+    public Proyecto(Long idProyecto, String tituloProyecto, String descripcion, Date fechaInicio, Date fechaFin, Long idUser) {
         this.idProyecto = idProyecto;
         this.tituloProyecto = tituloProyecto;
         this.descripcion = descripcion;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
+        this.idUser = idUser;
     }
+
+    
     
     
     

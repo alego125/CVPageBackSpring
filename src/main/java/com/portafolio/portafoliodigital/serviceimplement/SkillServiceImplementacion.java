@@ -5,6 +5,7 @@ import com.portafolio.portafoliodigital.model.Skill;
 import com.portafolio.portafoliodigital.repository.SkillRepository;
 import com.portafolio.portafoliodigital.service.ISkillService;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,8 +24,8 @@ public class SkillServiceImplementacion implements ISkillService{
 
     @Override
     @Transactional
-    public void crearSkill(Skill skill) {
-        this.skillRepo.save(skill);
+    public Skill crearSkill(Skill skill) {
+        return this.skillRepo.save(skill);
     }
 
     @Override
@@ -38,5 +39,12 @@ public class SkillServiceImplementacion implements ISkillService{
     public void actualizarSkill(Skill skill) {
         this.skillRepo.save(skill);
     }
+
+    @Override
+    public Optional<Skill> buscarSkillPorId(Long id) {
+        return this.skillRepo.findById(id);
+    }
+    
+    
     
 }

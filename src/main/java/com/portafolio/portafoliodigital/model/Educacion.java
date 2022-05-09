@@ -29,6 +29,9 @@ public class Educacion {
     @Column(name = "fecha_fin", nullable = true)
     private Date fechaFin;
     
+    @JoinColumn(name = "id_user")
+    private Long idUser;
+    
     /*Conecto la tabla  educacion con institucion marcando la relacion muchos a uno y haciendo el join con el id de institucion el cual sera la clave foranea
     de esta entidad luego declaro un atributo de  clase institucion */
     @ManyToOne
