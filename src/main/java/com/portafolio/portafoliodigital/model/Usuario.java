@@ -1,6 +1,8 @@
 package com.portafolio.portafoliodigital.model;
 
+import java.io.Serializable;
 import java.sql.Date;
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +19,7 @@ import lombok.ToString;
 @Table(name = "user")
 @Getter @Setter
 @ToString
-public class Usuario {
+public class Usuario implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,7 +39,7 @@ public class Usuario {
     private String apellido;
     
     @Column(name = "fecha_nacimiento", length = 3, nullable = false)
-    private Date fechaNacimiento;
+    private LocalDate fechaNacimiento;
     
     @Column(length = 45, nullable = true)
     private String web;
@@ -64,7 +66,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(Long idUser, String name,  String nombre, String apellido, Date fechaNacimiento, String web, String telefono, String email, String presentacion, String urlPortada, String urlPerfil) {
+    public Usuario(Long idUser, String name,  String nombre, String apellido, LocalDate fechaNacimiento, String web, String telefono, String email, String presentacion, String urlPortada, String urlPerfil) {
         this.idUser = idUser;
         this.name = name;
 //        this.password = password;

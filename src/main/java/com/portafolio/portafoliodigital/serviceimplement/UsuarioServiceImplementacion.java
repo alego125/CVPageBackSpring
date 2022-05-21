@@ -50,8 +50,8 @@ public class UsuarioServiceImplementacion implements IUsuarioService {
     }    
 
     @Override
-    public Usuario actualizarUsuario(Usuario usuario) {                                                
-        return this.usuarioRepo.save(usuario);
+    public void actualizarUsuario(Usuario usuario) {                                                
+        this.usuarioRepo.save(usuario);
     }
 
 //    @Override
@@ -76,6 +76,11 @@ public class UsuarioServiceImplementacion implements IUsuarioService {
     @Override
     public Optional<Usuario> buscarPorId(Long id) {
         return this.usuarioRepo.findById(id);
+    }
+
+    @Override
+    public Usuario actualizarPresentacion(Usuario usuario) {
+        return this.usuarioRepo.save(usuario);
     }
 
 }

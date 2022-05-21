@@ -23,8 +23,8 @@ public class RedServiceImplementacion implements IRedService{
 
     @Override
     @Transactional
-    public void crearRed(Red red) {
-        this.redRepo.save(red);
+    public Red crearRed(Red red) {
+       return this.redRepo.save(red);
     }
 
     @Override
@@ -35,8 +35,8 @@ public class RedServiceImplementacion implements IRedService{
 
     @Override
     @Transactional
-    public void actualizarRed(Red red) {
-        this.redRepo.save(red);
+    public Red actualizarRed(Red red) {
+        return this.redRepo.save(red);
     }
     
 }

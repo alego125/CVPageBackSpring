@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,19 +21,27 @@ public class Red {
     @Column(name = "id_red")
     private Long idRed;
     
-    @Column(length = 45, nullable = false)
+    @Column(length = 255, nullable = false)
     private String link;
     
-    @Column(length = 45, nullable = false)
-    private String nombreRed;
+    @ManyToOne
+    @JoinColumn(name="id_nombreRedes")
+    private NombreRedes nombreRed;
+    
+//    @ManyToOne
+    @JoinColumn(name = "id_user")
+    private Long idUser;
 
     public Red() {
     }
 
-    public Red(Long idRed, String link, String nombreRed) {
+    public Red(Long idRed, String link, NombreRedes nombreRed, Long idUser) {
         this.idRed = idRed;
         this.link = link;
         this.nombreRed = nombreRed;
-    }        
+        this.idUser = idUser;
+    }
+
+        
     
 }

@@ -4,6 +4,7 @@ package com.portafolio.portafoliodigital.dto;
 import com.portafolio.portafoliodigital.model.Domicilio;
 import java.io.Serializable;
 import java.sql.Date;
+import java.time.LocalDate;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +17,7 @@ public class UsuarioDTO implements Serializable{
     String name;
     String nombre;
     String apellido;
-    Date fechaNacimiento;
+    LocalDate fechaNacimiento;
     String web;
     String telefono;
     String email;    

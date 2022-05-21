@@ -23,8 +23,8 @@ public class EducacionServiceImplementacion implements IEducacionService{
 
     @Override
     @Transactional
-    public void crearEduacion(Educacion educacion) {
-        this.educacionRepo.save(educacion);
+    public Educacion crearEduacion(Educacion educacion) {
+        return this.educacionRepo.save(educacion);
     }
 
     @Override

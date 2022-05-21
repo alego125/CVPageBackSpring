@@ -5,6 +5,7 @@ import com.portafolio.portafoliodigital.model.Institucion;
 import com.portafolio.portafoliodigital.repository.InstitucionRepository;
 import com.portafolio.portafoliodigital.service.IInstitucionService;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,6 +38,11 @@ public class InstitucionServiceImplementacion implements IInstitucionService{
     @Transactional
     public void actualizarInstitucion(Institucion experiencia) {
         this.intitucionRepo.save(experiencia);
+    }
+
+    @Override
+    public Optional<Institucion> buscarInstitucionPorId(Long id) {
+        return this.intitucionRepo.findById(id);
     }
     
 }

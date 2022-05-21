@@ -24,6 +24,9 @@ public class Educacion {
     @Column(name = "nombre_titulo", length = 45, nullable = false)
     private String nombreTitulo;
     
+    @Column(name = "url_imagen", length = 250, nullable = true)
+    private String imagenInstitucion;
+    
     @Column(name = "fecha_inicio", nullable = false)
     private Date fechainicio;
     @Column(name = "fecha_fin", nullable = true)

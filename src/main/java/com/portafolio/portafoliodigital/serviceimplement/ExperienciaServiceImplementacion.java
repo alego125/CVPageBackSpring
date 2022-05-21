@@ -23,8 +23,8 @@ public class ExperienciaServiceImplementacion implements IExperienciaService{
 
     @Override
     @Transactional
-    public void crearExperiencia(Experiencia experiencia) {
-        this.experienciaRepo.save(experiencia);
+    public Experiencia crearExperiencia(Experiencia experiencia) {
+        return this.experienciaRepo.save(experiencia);
     }
 
     @Override
@@ -35,8 +35,8 @@ public class ExperienciaServiceImplementacion implements IExperienciaService{
 
     @Override
     @Transactional
-    public void actualizarExperiencia(Experiencia experiencia) {
-        this.experienciaRepo.save(experiencia);
+    public Experiencia actualizarExperiencia(Experiencia experiencia) {
+       return this.experienciaRepo.save(experiencia);
     }
     
 }

@@ -8,8 +8,8 @@ import java.util.List;
 public interface IRedService {
 
     public List<Red> listarRedes();
-    public void crearRed(Red red);
+    public Red crearRed(Red red);
     public void eliminarRed(Long id);
-    public void actualizarRed(Red red);
+    public Red actualizarRed(Red red);
     
 }
