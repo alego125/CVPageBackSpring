@@ -36,7 +36,7 @@ public class Educacion {
 
     @ManyToOne
     @JoinColumn(name = "id_user")
-    private Usuario usuario;
+    private User usuario;
     
     /*Conecto la tabla  educacion con institucion marcando la relacion muchos a uno y haciendo el join con el id de institucion el cual sera la clave foranea
     de esta entidad luego declaro un atributo de  clase institucion */

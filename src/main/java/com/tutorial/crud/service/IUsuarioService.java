@@ -12,6 +12,7 @@ import java.util.Optional;
 public interface IUsuarioService {
     
     List<UsuarioDTO> listarUsuarios();
+    UsuarioDTO listarUsuarioPorUserName(String userName);
     void crearUsuario(User user);
     void eliminarUsuario(Long id);
     User actualizarPresentacion(User user);

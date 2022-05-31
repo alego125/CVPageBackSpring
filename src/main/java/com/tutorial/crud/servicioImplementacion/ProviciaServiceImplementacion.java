@@ -1,16 +1,17 @@
 
-package com.tutorial.crud.service;
+package com.tutorial.crud.servicioImplementacion;
 
 import java.util.List;
 
 import com.tutorial.crud.entity.Provincia;
 import com.tutorial.crud.repository.ProvinciaRepository;
+import com.tutorial.crud.service.IProvinciaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ProviciaServiceImplementacion implements IProvinciaService{
+public class ProviciaServiceImplementacion implements IProvinciaService {
     
     @Autowired
     private ProvinciaRepository provinciaRepo;

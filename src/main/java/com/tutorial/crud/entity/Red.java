@@ -32,7 +32,7 @@ public class Red {
     
     @ManyToOne
     @JoinColumn(name = "id_user")
-    private Usuario usuario;
+    private User usuario;
 
     public Red() {
     }

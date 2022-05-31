@@ -1,18 +1,19 @@
 
-package com.tutorial.crud.service;
+package com.tutorial.crud.servicioImplementacion;
 
 import java.util.List;
 import java.util.Optional;
 
 import com.tutorial.crud.entity.Proyecto;
 import com.tutorial.crud.repository.ProyectoRepository;
+import com.tutorial.crud.service.IProyectoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class ProyectoServiceImplementacion implements IProyectoService{
+public class ProyectoServiceImplementacion implements IProyectoService {
 
     @Autowired
     private ProyectoRepository proyectoRepo;

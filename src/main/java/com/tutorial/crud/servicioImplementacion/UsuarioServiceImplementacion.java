@@ -1,4 +1,4 @@
-package com.tutorial.crud.service;
+package com.tutorial.crud.servicioImplementacion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,7 @@ import java.util.Optional;
 import com.tutorial.crud.dto.UsuarioDTO;
 import com.tutorial.crud.entity.User;
 import com.tutorial.crud.repository.UserRepository;
+import com.tutorial.crud.service.IUsuarioService;
 import com.tutorial.crud.util.Helpers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +38,16 @@ public class UsuarioServiceImplementacion implements IUsuarioService {
 
         return dto;
     }
+
+    @Override
+    public UsuarioDTO listarUsuarioPorUserName(String userName) {
+
+        Optional<User> user = usuarioRepo.findByName(userName);
+        UsuarioDTO usuarioDto = Helpers.modelMapper().map(user,UsuarioDTO.class);
+
+        return usuarioDto;
+    }
+
 
     @Override
     public void crearUsuario(User user) {

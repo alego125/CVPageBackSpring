@@ -85,4 +85,9 @@ public class UsuarioController {
         return ResponseEntity.ok(this.serviceUser.actualizarPresentacion(user));
     }
 
+    @GetMapping(value = "buscarPorUserName/{userName}")
+    public ResponseEntity<UsuarioDTO> getUserByUserName(@PathVariable("userName") String userName){
+        return ResponseEntity.ok(this.serviceUser.listarUsuarioPorUserName(userName));
+    }
+
 }

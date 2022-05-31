@@ -11,7 +11,7 @@ import com.tutorial.crud.security.enums.RolNombre;
 import com.tutorial.crud.security.jwt.JwtProvider;
 import com.tutorial.crud.security.service.RolService;
 import com.tutorial.crud.security.service.UsuarioService;
-import com.tutorial.crud.service.UsuarioServiceImplementacion;
+import com.tutorial.crud.servicioImplementacion.UsuarioServiceImplementacion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

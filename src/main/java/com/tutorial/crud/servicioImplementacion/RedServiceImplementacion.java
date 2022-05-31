@@ -1,16 +1,17 @@
 
-package com.tutorial.crud.service;
+package com.tutorial.crud.servicioImplementacion;
 
 import java.util.List;
 
 import com.tutorial.crud.entity.Red;
 import com.tutorial.crud.repository.RedRepository;
+import com.tutorial.crud.service.IRedService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class RedServiceImplementacion implements IRedService{
+public class RedServiceImplementacion implements IRedService {
 
     @Autowired
     private RedRepository redRepo;

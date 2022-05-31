@@ -1,16 +1,17 @@
 
-package com.tutorial.crud.service;
+package com.tutorial.crud.servicioImplementacion;
 
 import java.util.List;
 
 import com.tutorial.crud.entity.Educacion;
 import com.tutorial.crud.repository.EducacionRepository;
+import com.tutorial.crud.service.IEducacionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class EducacionServiceImplementacion implements IEducacionService{
+public class EducacionServiceImplementacion implements IEducacionService {
 
     @Autowired
     private EducacionRepository educacionRepo;

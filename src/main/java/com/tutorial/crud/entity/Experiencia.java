@@ -38,7 +38,7 @@ public class Experiencia {
 
     @ManyToOne
     @JoinColumn(name = "id_user")
-    private Usuario usuario;
+    private User usuario;
     @Column(name = "url_imagen", nullable = true)
    private String urlImagen;
 
