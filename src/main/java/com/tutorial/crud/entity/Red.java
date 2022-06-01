@@ -30,9 +30,9 @@ public class Red {
     @JoinColumn(name="id_nombreRedes")
     private NombreRedes nombreRed;
     
-    @ManyToOne
+//    @ManyToOne
     @JoinColumn(name = "id_user")
-    private User usuario;
+    private Long idUser;
 
     public Red() {
     }

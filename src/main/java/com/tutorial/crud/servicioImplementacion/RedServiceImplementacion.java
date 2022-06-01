@@ -2,8 +2,10 @@
 package com.tutorial.crud.servicioImplementacion;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.tutorial.crud.entity.Red;
+import com.tutorial.crud.entity.User;
 import com.tutorial.crud.repository.RedRepository;
 import com.tutorial.crud.service.IRedService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +41,10 @@ public class RedServiceImplementacion implements IRedService {
     public Red actualizarRed(Red red) {
         return this.redRepo.save(red);
     }
-    
+
+    @Override
+    public Optional<List<Red>> buscarPorUsuario(Long id) {
+        return this.redRepo.findByIdUser(id);
+    }
+
 }
