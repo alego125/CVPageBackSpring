@@ -26,6 +26,12 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
     private Long idUser;
+
+    @Column(name = "active", nullable = false)
+    private Boolean active;
+
+    @Column(name = "rol", nullable = false)
+    private String rolUser;
     
     @Column(name = "user_name", length = 45, nullable = false)
     private String name;
@@ -64,7 +70,9 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String name, String nombre, String apellido, String email) {
+    public User(Boolean active, String rolUser, String name, String nombre, String apellido, String email) {
+        this.active = active;
+        this.rolUser = rolUser;
         this.name = name;
         this.nombre = nombre;
         this.apellido = apellido;

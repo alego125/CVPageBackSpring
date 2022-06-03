@@ -29,9 +29,9 @@ public class Skill {
     @Column(length = 3, nullable = false)
     private float porcentaje;
 
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn(name = "id_user")
-    private User usuario;
+    private Long idUser;
 
     public Skill() {
     } 

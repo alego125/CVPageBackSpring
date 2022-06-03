@@ -24,6 +24,8 @@ public class UsuarioDTO implements Serializable{
     String presentacion;
     String urlPortada;
     String urlPerfil;
+    Boolean active;
+    String rol;
     Domicilio domicilio;
 
 }
