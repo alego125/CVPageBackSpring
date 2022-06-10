@@ -209,16 +209,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ale/Desktop/portafoliodigital&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.com.haulmont.jpb.tools&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Users/ale/Desktop/portafoliodigital",
+    "settings.editor.selected.configurable": "configurable.group.com.haulmont.jpb.tools",
+    "spring.configuration.checksum": "2c5bc0b20b50c6dbcf356499dca33ca3"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.CrudApplication">
     <configuration name="CrudApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -230,6 +239,20 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CrudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="portafoliodigital" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tutorial.crud.CrudApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortafoliodigitalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="portafoliodigital" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.portafolio.portafoliodigital.PortafoliodigitalApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -251,6 +274,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583584017316</updated>
+      <workItem from="1654604872428" duration="913000" />
     </task>
     <servers />
   </component>
@@ -286,6 +310,9 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
