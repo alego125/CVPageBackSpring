@@ -209,17 +209,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ale/Desktop/portafoliodigital&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.com.haulmont.jpb.tools&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;2c5bc0b20b50c6dbcf356499dca33ca3&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Users/ale/Desktop/portafoliodigital",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "spring.configuration.checksum": "2c5bc0b20b50c6dbcf356499dca33ca3"
   }
-}</component>
+}]]></component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -320,6 +320,10 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
